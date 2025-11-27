@@ -5,7 +5,7 @@
 print("----- Advanced Login System -----")
 
 # Stored credentials
-stored_username = "queenakshara"
+stored_username = "aarthi"
 stored_password = "secure123"
 
 # User input
