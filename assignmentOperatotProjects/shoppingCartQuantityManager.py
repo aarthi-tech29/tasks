@@ -19,6 +19,7 @@ while True:
         item = input("Enter item name to add: ")
         if not item.isalpha():
             print("Invalid item name! Please enter correctly")
+            continue
         qty = int(input("Enter quantity to add: "))
         if item in cart:
             cart[item] += qty  # add quantity
