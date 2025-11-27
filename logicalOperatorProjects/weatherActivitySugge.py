@@ -30,7 +30,7 @@ load_dotenv()  # loads .env
 
 # Store API key & location
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
-LAT = 8.741222    # Tirunelveli
+LAT = 8.741222    # Tirunelveli  # LAT = 28.6139 LON = 77.2090 - for Delhi
 LON = 77.694626    # Tirunelveli
 MIN_PLEASANT = 15  # °C
 MAX_PLEASANT = 25  # °C
@@ -48,6 +48,7 @@ def should_go_for_walk():
     response = requests.get(url, timeout=10) #sends the request to the API
     response.raise_for_status()
     data = response.json() # converts the JSON response into a Python dictionary
+    # print(data)
 
 # Check the temperature
     temp = data.get("main", {}).get("temp") 
